@@ -5,13 +5,21 @@ The a program that reads "threat" meta files and renders them in a table using A
 ## Sample Metafile Record:
 
 ```json
-[ 
-    { 
-        'date': 'Jan 1, 2015 13:10:59', 'filename': 'virus.exe', 'action': 'files-deleted', 'submit-type': 'FG300B3910602113/root', 'rating': 'high-risk'
-    },
-    { 
-        'date': 'Jan 1, 2015 13:12:59', 'filename': 'helper.exe', 'action': 'files-added', 'submit-type': 'FG300B3910602113/root', 'rating': 'low-risk'
-    } 
+[
+  {
+    "date": "Jan 1, 2015 13:10:59",
+    "filename": "virus.exe",
+    "action": "files-deleted",
+    "submit-type": "FG300B3910602113/root",
+    "rating": "high-risk"
+  },
+  {
+    "date": "Jan 1, 2015 13:12:59",
+    "filename": "helper.exe",
+    "action": "files-added",
+    "submit-type": "FG300B3910602113/root",
+    "rating": "low-risk"
+  }
 ]
 ```
 
@@ -38,4 +46,3 @@ Each file is a list of JSON records in no particular order. These records will b
 ## Future improvements
 
 If a new record is detected and should be included in the table based on its state (time-period), an alert should be presented to the user informing them to reload the table.
-
