@@ -2,6 +2,8 @@
 
 The a program that reads "threat" meta files and renders them in a table using Ajax. Each record in the table includes all fields of the meta file. Each row color-coded based on the record's threat level (rating). The table allows sorting.
 
+![alt text](./screenshot.png "Screenshot of threat monitor")
+
 ## Sample Metafile Record:
 
 ```json
