@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Threats</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="http://cdn.date-fns.org/v2.0.0-alpha0/date_fns.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js" integrity="sha256-7/yoZS3548fXSRXqc/xYzjsmuW3sFKzuvOCHd06Pmps=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    {% load static %} <link rel="stylesheet" type="text/css" href="{% static "threat/style.css" %}">
+
+    {% load static %} <script src="{% static "threat/main.js" %}"></script>
+  </head>
+  <body>
+    <div class="container">
+
+      <h1 class="my-4">Current Threats</h1>
+
+      <div class="form-group">
+        <label for="period">Select time period</label>
+        <select class="form-control target" id="period">
+          <option value="day">24 hours</option>
+          <option value="week">7 days</option>
+          <option value="month">4 weeks</option>
+        </select>
+        <button type="button" class="btn btn-primary my-1" id="reload">Reload</button>
+      </div>
+      
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col" class="order-by" id="order-filename">Filename</th>
+            <th scope="col" class="order-by" id="order-date">Date</th>
+            <th scope="col" class="order-by" id="order-action">Action</th>
+            <th scope="col" class="order-by" id="order-submit-type">Submit type</th>
+            <th scope="col" class="order-by" id="order-rating">Rating</th>
+          </tr>
+        </thead>
+        <tbody class="threats">
+        </tbody>
+      </table>
+    </div>
+    </body>
+    </html>
+    

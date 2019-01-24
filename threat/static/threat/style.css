@@ -1,0 +1,36 @@
+body {
+  background: #eee;
+}
+
+.order-by {
+  cursor: pointer;
+}
+
+th.order-by.field {
+  background: #555;
+}
+
+.clean {
+  background-color: #a1ffb3;
+  color: #005900;
+}
+
+.low-risk {
+  background: #8ce8ff;
+  color: #0c688c;
+}
+
+.medium-risk {
+  background: #ffffa6;
+  color: #8c6900;
+}
+
+.high-risk {
+  background: #ffab41;
+  color: #8c1200;
+}
+
+.malicious {
+  background: #ff675c;
+  color: #8c0000;
+}
